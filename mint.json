@@ -52,22 +52,480 @@
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["introduction", "quickstart", "development"]
+      "pages": [
+        "introduction",
+        "quickstart",
+        "development"
+      ]
     },
     {
       "group": "Essentials",
-      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
+      "pages": [
+        "essentials/markdown",
+        "essentials/code",
+        "essentials/images",
+        "essentials/settings",
+        "essentials/navigation"
+      ]
     },
     {
       "group": "API Documentation",
-      "pages": ["api-reference/introduction"]
+      "pages": [
+        "api-reference/introduction"
+      ]
     },
     {
       "group": "Endpoint Examples",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        {
+          "group": "Accounts",
+          "pages": [
+            "api-reference/accounts/retrieve-an-account",
+            "api-reference/accounts/update-an-account",
+            "api-reference/accounts/create-an-account",
+            "api-reference/accounts/update-account-status",
+            "api-reference/accounts/update-account-plan"
+          ]
+        },
+        {
+          "group": "ActivationLogs",
+          "pages": [
+            "api-reference/activationlogs/list-all-activation-logs",
+            "api-reference/activationlogs/retrieve-an-activation-log",
+            "api-reference/activationlogs/export-activation-logs"
+          ]
+        },
+        {
+          "group": "Activations",
+          "pages": [
+            "api-reference/activations/list-all-activations",
+            "api-reference/activations/create-an-activation",
+            "api-reference/activations/retrieve-an-activation",
+            "api-reference/activations/delete-an-activation",
+            "api-reference/activations/update-an-activation",
+            "api-reference/activations/create-an-offline-activation",
+            "api-reference/activations/delete-an-activation-1",
+            "api-reference/activations/delete-an-activation-offline",
+            "api-reference/activations/increment-an-activation-meter-attribute",
+            "api-reference/activations/export-activations"
+          ]
+        },
+        {
+          "group": "Analytics",
+          "pages": [
+            "api-reference/analytics/retrieve-account-stats",
+            "api-reference/analytics/retrieve-licenses-stats",
+            "api-reference/analytics/retrieve-activations-by-time",
+            "api-reference/analytics/retrieve-activations-by-os",
+            "api-reference/analytics/retrieve-activations-by-os-version",
+            "api-reference/analytics/retrieve-activations-by-geo-location",
+            "api-reference/analytics/retrieve-activations-by-release-version",
+            "api-reference/analytics/retrieve-activations-by-virtual-machines",
+            "api-reference/analytics/retrieve-trial-activations-by-time",
+            "api-reference/analytics/retrieve-trial-activations-by-os",
+            "api-reference/analytics/retrieve-trial-activations-by-os-version",
+            "api-reference/analytics/retrieve-trial-activations-by-geo-location",
+            "api-reference/analytics/retrieve-trial-activations-by-virtual-machines"
+          ]
+        },
+        {
+          "group": "Authentication",
+          "pages": [
+            "api-reference/authentication/log-into-the-account",
+            "api-reference/authentication/log-into-the-account-using-google",
+            "api-reference/authentication/check-whether-sso-is-enabled",
+            "api-reference/authentication/initiate-saml-sso-login",
+            "api-reference/authentication/saml-assertion-consumer-service",
+            "api-reference/authentication/send-reset-password-email"
+          ]
+        },
+        {
+          "group": "AutomatedEmailEventLogs",
+          "pages": [
+            "api-reference/automatedemaileventlogs/list-all-automated-email-event-logs",
+            "api-reference/automatedemaileventlogs/retrieve-an-automated-email-event-log",
+            "api-reference/automatedemaileventlogs/resend-the-automated-email-mail"
+          ]
+        },
+        {
+          "group": "AutomatedEmails",
+          "pages": [
+            "api-reference/automatedemails/list-all-automated-emails",
+            "api-reference/automatedemails/create-an-automated-email",
+            "api-reference/automatedemails/retrieve-an-automated-email",
+            "api-reference/automatedemails/delete-an-automated-email",
+            "api-reference/automatedemails/update-an-automated-email"
+          ]
+        },
+        {
+          "group": "CreditCards",
+          "pages": [
+            "api-reference/creditcards/list-all-credit-cards",
+            "api-reference/creditcards/create-a-credit-card",
+            "api-reference/creditcards/delete-a-credit-card"
+          ]
+        },
+        {
+          "group": "EventLogs",
+          "pages": [
+            "api-reference/eventlogs/list-all-event-logs",
+            "api-reference/eventlogs/retrieve-an-event-log"
+          ]
+        },
+        {
+          "group": "FeatureFlags",
+          "pages": [
+            "api-reference/featureflags/list-all-feature-flags",
+            "api-reference/featureflags/create-a-feature-flag",
+            "api-reference/featureflags/retrieve-a-feature-flag",
+            "api-reference/featureflags/delete-a-feature-flag",
+            "api-reference/featureflags/update-a-feature-flag"
+          ]
+        },
+        {
+          "group": "Invoices",
+          "pages": [
+            "api-reference/invoices/list-all-invoices"
+          ]
+        },
+        {
+          "group": "Licenses",
+          "pages": [
+            "api-reference/licenses/list-all-licenses",
+            "api-reference/licenses/create-a-license",
+            "api-reference/licenses/retrieve-a-license",
+            "api-reference/licenses/delete-a-license",
+            "api-reference/licenses/update-a-license",
+            "api-reference/licenses/export-all-licenses",
+            "api-reference/licenses/renew-license",
+            "api-reference/licenses/extend-license",
+            "api-reference/licenses/renew-license-maintenance",
+            "api-reference/licenses/extend-license-maintenance",
+            "api-reference/licenses/reset-license-meter-attribute",
+            "api-reference/licenses/delete-a-license-meter-attribute",
+            "api-reference/licenses/delete-a-license-metadata-field"
+          ]
+        },
+        {
+          "group": "LicenseTemplates",
+          "pages": [
+            "api-reference/licensetemplates/list-all-license-templates",
+            "api-reference/licensetemplates/create-a-license-template",
+            "api-reference/licensetemplates/retrieve-a-license-template",
+            "api-reference/licensetemplates/delete-a-license-template",
+            "api-reference/licensetemplates/update-a-license-template"
+          ]
+        },
+        {
+          "group": "MaintenancePolicies",
+          "pages": [
+            "api-reference/maintenancepolicies/list-all-maintenance-policies",
+            "api-reference/maintenancepolicies/create-a-maintenance-policy",
+            "api-reference/maintenancepolicies/retrieve-a-maintenance-policy",
+            "api-reference/maintenancepolicies/delete-a-maintenance-policy",
+            "api-reference/maintenancepolicies/update-a-maintenance-policy"
+          ]
+        },
+        {
+          "group": "OidcConfigurations",
+          "pages": [
+            "api-reference/oidcconfigurations/retrieve-an-oidc-configuration",
+            "api-reference/oidcconfigurations/create-an-oidc-configuration",
+            "api-reference/oidcconfigurations/delete-an-oidc-configuration",
+            "api-reference/oidcconfigurations/update-an-oidc-configuration"
+          ]
+        },
+        {
+          "group": "OrganizationActivations",
+          "pages": [
+            "api-reference/organizationactivations/list-all-organization-activations",
+            "api-reference/organizationactivations/retrieve-an-organization-activation"
+          ]
+        },
+        {
+          "group": "OrganizationLicenses",
+          "pages": [
+            "api-reference/organizationlicenses/list-all-organization-licenses",
+            "api-reference/organizationlicenses/retrieve-an-organization-license",
+            "api-reference/organizationlicenses/update-an-organization-license"
+          ]
+        },
+        {
+          "group": "Organizations",
+          "pages": [
+            "api-reference/organizations/list-all-organizations",
+            "api-reference/organizations/create-an-organization",
+            "api-reference/organizations/retrieve-an-organization",
+            "api-reference/organizations/delete-an-organization",
+            "api-reference/organizations/update-an-organization"
+          ]
+        },
+        {
+          "group": "OrganizationUserGroups",
+          "pages": [
+            "api-reference/organizationusergroups/list-all-organization-user-groups",
+            "api-reference/organizationusergroups/create-an-organization-user-group",
+            "api-reference/organizationusergroups/retrieve-an-organization-user-group",
+            "api-reference/organizationusergroups/delete-an-organization-user-group",
+            "api-reference/organizationusergroups/update-an-organization-user-group"
+          ]
+        },
+        {
+          "group": "OrganizationUsers",
+          "pages": [
+            "api-reference/organizationusers/list-all-organization-users",
+            "api-reference/organizationusers/create-an-organization-user",
+            "api-reference/organizationusers/retrieve-an-organization-user",
+            "api-reference/organizationusers/delete-an-organization-user",
+            "api-reference/organizationusers/update-an-organization-user"
+          ]
+        },
+        {
+          "group": "PersonalAccessTokens",
+          "pages": [
+            "api-reference/personalaccesstokens/list-all-personal-access-tokens",
+            "api-reference/personalaccesstokens/create-a-personal-access-token",
+            "api-reference/personalaccesstokens/retrieve-a-personal-access-token",
+            "api-reference/personalaccesstokens/delete-a-personal-access-token",
+            "api-reference/personalaccesstokens/update-a-personal-access-token"
+          ]
+        },
+        {
+          "group": "Plans",
+          "pages": [
+            "api-reference/plans/list-all-plans",
+            "api-reference/plans/retrieve-a-plan"
+          ]
+        },
+        {
+          "group": "Products",
+          "pages": [
+            "api-reference/products/list-all-products",
+            "api-reference/products/create-a-product",
+            "api-reference/products/retrieve-a-product",
+            "api-reference/products/delete-a-product",
+            "api-reference/products/update-a-product",
+            "api-reference/products/download-productdat-file",
+            "api-reference/products/delete-a-product-metadata-field"
+          ]
+        },
+        {
+          "group": "ProductVersions",
+          "pages": [
+            "api-reference/productversions/list-all-product-versions",
+            "api-reference/productversions/create-a-product-version",
+            "api-reference/productversions/retrieve-a-product-version",
+            "api-reference/productversions/delete-a-product-version",
+            "api-reference/productversions/update-a-product-version"
+          ]
+        },
+        {
+          "group": "ReleaseChannels",
+          "pages": [
+            "api-reference/releasechannels/list-all-release-channels",
+            "api-reference/releasechannels/create-a-release-channel",
+            "api-reference/releasechannels/retrieve-a-release-channel",
+            "api-reference/releasechannels/delete-a-release-channel",
+            "api-reference/releasechannels/update-a-release-channel"
+          ]
+        },
+        {
+          "group": "ReleaseFiles",
+          "pages": [
+            "api-reference/releasefiles/list-all-release-files",
+            "api-reference/releasefiles/create-a-release-file",
+            "api-reference/releasefiles/retrieve-a-release-file",
+            "api-reference/releasefiles/delete-a-release-file"
+          ]
+        },
+        {
+          "group": "ReleasePlatforms",
+          "pages": [
+            "api-reference/releaseplatforms/list-all-release-platforms",
+            "api-reference/releaseplatforms/create-a-release-platform",
+            "api-reference/releaseplatforms/retrieve-a-release-platform",
+            "api-reference/releaseplatforms/delete-a-release-platform",
+            "api-reference/releaseplatforms/update-a-release-platform"
+          ]
+        },
+        {
+          "group": "Releases",
+          "pages": [
+            "api-reference/releases/list-all-releases",
+            "api-reference/releases/create-a-release",
+            "api-reference/releases/retrieve-a-release",
+            "api-reference/releases/delete-a-release",
+            "api-reference/releases/update-a-release",
+            "api-reference/releases/check-for-an-update",
+            "api-reference/releases/get-latest-release",
+            "api-reference/releases/check-if-release-is-allowed",
+            "api-reference/releases/publish-release"
+          ]
+        },
+        {
+          "group": "ResellerActivations",
+          "pages": [
+            "api-reference/reselleractivations/list-all-reseller-activations",
+            "api-reference/reselleractivations/retrieve-a-reseller-activation"
+          ]
+        },
+        {
+          "group": "ResellerLicenses",
+          "pages": [
+            "api-reference/resellerlicenses/list-all-reseller-licenses",
+            "api-reference/resellerlicenses/retrieve-a-reseller-license",
+            "api-reference/resellerlicenses/delete-a-reseller-license",
+            "api-reference/resellerlicenses/update-a-reseller-license"
+          ]
+        },
+        {
+          "group": "ResellerOrganizations",
+          "pages": [
+            "api-reference/resellerorganizations/list-all-reseller-organizations",
+            "api-reference/resellerorganizations/create-a-reseller-organization",
+            "api-reference/resellerorganizations/retrieve-a-reseller-organization",
+            "api-reference/resellerorganizations/delete-a-reseller-organization",
+            "api-reference/resellerorganizations/update-a-reseller-organization"
+          ]
+        },
+        {
+          "group": "Resellers",
+          "pages": [
+            "api-reference/resellers/list-all-resellers",
+            "api-reference/resellers/create-a-reseller",
+            "api-reference/resellers/retrieve-a-reseller",
+            "api-reference/resellers/delete-a-reseller",
+            "api-reference/resellers/update-a-reseller"
+          ]
+        },
+        {
+          "group": "ResellerUsers",
+          "pages": [
+            "api-reference/resellerusers/list-all-reseller-users",
+            "api-reference/resellerusers/create-a-reseller-user",
+            "api-reference/resellerusers/retrieve-a-reseller-user",
+            "api-reference/resellerusers/delete-a-reseller-user",
+            "api-reference/resellerusers/update-a-reseller-user"
+          ]
+        },
+        {
+          "group": "Roles",
+          "pages": [
+            "api-reference/roles/list-all-roles",
+            "api-reference/roles/create-a-role",
+            "api-reference/roles/list-all-role-claims",
+            "api-reference/roles/retrieve-a-role",
+            "api-reference/roles/delete-a-role",
+            "api-reference/roles/update-a-role"
+          ]
+        },
+        {
+          "group": "SamlConfigurations",
+          "pages": [
+            "api-reference/samlconfigurations/retrieve-a-saml-configuration",
+            "api-reference/samlconfigurations/create-a-saml-configuration",
+            "api-reference/samlconfigurations/delete-a-saml-configuration",
+            "api-reference/samlconfigurations/update-a-saml-configuration",
+            "api-reference/samlconfigurations/download-service-provider-certificate"
+          ]
+        },
+        {
+          "group": "Segments",
+          "pages": [
+            "api-reference/segments/list-all-segments",
+            "api-reference/segments/create-a-segment",
+            "api-reference/segments/retrieve-a-segment",
+            "api-reference/segments/delete-a-segment",
+            "api-reference/segments/update-a-segment"
+          ]
+        },
+        {
+          "group": "SendingDomains",
+          "pages": [
+            "api-reference/sendingdomains/list-all-sending-domains",
+            "api-reference/sendingdomains/create-a-sending-domain",
+            "api-reference/sendingdomains/retrieve-a-sending-domain",
+            "api-reference/sendingdomains/delete-a-sending-domain",
+            "api-reference/sendingdomains/create-a-sending-domain-1"
+          ]
+        },
+        {
+          "group": "Tags",
+          "pages": [
+            "api-reference/tags/list-all-tags",
+            "api-reference/tags/create-a-tag",
+            "api-reference/tags/retrieve-a-tag",
+            "api-reference/tags/delete-a-tag",
+            "api-reference/tags/update-a-tag"
+          ]
+        },
+        {
+          "group": "TrialActivations",
+          "pages": [
+            "api-reference/trialactivations/list-all-trial-activations",
+            "api-reference/trialactivations/create-a-trial-activation",
+            "api-reference/trialactivations/retrieve-a-trial-activation",
+            "api-reference/trialactivations/delete-a-trial-activation",
+            "api-reference/trialactivations/export-all-trial-activations",
+            "api-reference/trialactivations/extend-a-trial-activation",
+            "api-reference/trialactivations/create-an-offline-trial-activation"
+          ]
+        },
+        {
+          "group": "TrialPolicies",
+          "pages": [
+            "api-reference/trialpolicies/list-all-trial-policies",
+            "api-reference/trialpolicies/create-a-trial-policy",
+            "api-reference/trialpolicies/retrieve-a-trial-policy",
+            "api-reference/trialpolicies/delete-a-trial-policy",
+            "api-reference/trialpolicies/update-a-trial-policy"
+          ]
+        },
+        {
+          "group": "Users",
+          "pages": [
+            "api-reference/users/list-all-users",
+            "api-reference/users/create-an-user",
+            "api-reference/users/retrieve-an-user",
+            "api-reference/users/delete-an-user",
+            "api-reference/users/update-an-user",
+            "api-reference/users/export-all-users",
+            "api-reference/users/update-password",
+            "api-reference/users/generate-reset-password-token",
+            "api-reference/users/reset-password",
+            "api-reference/users/delete-a-user-metadata-field",
+            "api-reference/users/retrieve-profile",
+            "api-reference/users/update-profile",
+            "api-reference/users/list-all-licenses",
+            "api-reference/users/retrieve-a-license",
+            "api-reference/users/list-all-activations",
+            "api-reference/users/retrieve-an-activation",
+            "api-reference/users/list-all-releases",
+            "api-reference/users/list-all-release-platforms",
+            "api-reference/users/list-all-release-channels",
+            "api-reference/users/generate-the-2fa-secret",
+            "api-reference/users/generate-the-2fa-recovery-codes"
+          ]
+        },
+        {
+          "group": "WebhookEventLogs",
+          "pages": [
+            "api-reference/webhookeventlogs/list-all-webhook-event-logs",
+            "api-reference/webhookeventlogs/retrieve-a-webhook-event-log",
+            "api-reference/webhookeventlogs/resend-the-webhook"
+          ]
+        },
+        {
+          "group": "Webhooks",
+          "pages": [
+            "api-reference/webhooks/list-all-webhooks",
+            "api-reference/webhooks/create-a-webhook",
+            "api-reference/webhooks/retrieve-a-webhook",
+            "api-reference/webhooks/delete-a-webhook",
+            "api-reference/webhooks/update-a-webhook",
+            "api-reference/webhooks/list-all-events"
+          ]
+        }
       ]
     }
   ],
